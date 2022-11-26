@@ -1,0 +1,71 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(230,51,18,255);
+}
+
+input {
+    height: 3rem;
+    width: 20rem;
+    border: solid 5px rgba(74,104,118,255);
+    border-radius: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: rgba(230,51,18,255);
+}
+img {
+    height: 10rem;
+    width: 18rem;
+}
+
+.wrapper-div {
+    display: flex;
+    gap: 15rem;
+    height: 90vh;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inner-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper {
+    background-image: url("/images/59277-removebg-preview.jpg");
+    border-radius: 3rem;
+    padding: 150px 100px 150px 100px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.input-button input {
+    background-color: rgba(230,51,18,255);
+    color: white;
+    border: none;
+    width: 5rem;
+}
+.input-button {
+    align-items: center;
+}
+.input-button input:hover {
+    cursor: pointer;
+    background-color: black;
+    transition-duration: 0.5s;
+}

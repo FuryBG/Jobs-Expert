@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Landing</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="wrapper-div">
+                <div class="inner-wrapper">
+                    <img src="/images/Logo_expert.png">
+                </div>
+                <div class="inner-wrapper">
+                    <div class="form-wrapper">
+                        <form asp-controller="Auth" asp-action="Register">
+                            <div>
+                                <label>Email</label>
+                                <input name="email" type="text" placeholder="email@mail.com">
+                            </div>
+                            <div>
+                                <label>First Name</label>
+                                <input name="firstname" type="text" placeholder="John">
+                            </div>
+                            <div>
+                                <label>Last Name</label>
+                                <input name="lastname" type="text" placeholder="Doe">
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <input name="password" type="password">
+                            </div>
+                            <div>
+                                <label>Repeat Password</label>
+                                <input name="repeatpassword" type="password" placeholder="">
+                            </div>
+                            <div class="input-button">
+                                <input name="role" type="submit" value="Register">
+                            </div>
+                                <label>You are:</label>
+                            <div class="radio-input">
+                                <div>
+                                    <label>Recruiter</label>
+                                    <input name="role" type="radio" value="User" />
+                                </div>
+                                <div>
+                                    <label>Expert</label>
+                                    <input name="role" type="radio" value="Admin" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="controls"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+.search {
+    text-align: center;
+}
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-button:hover {
+    background-color: #c4c4c4 !important;
+}
+
+.filter-button {
+    padding: 0.5rem;
+    background-color: #eeeeee;
+    color: gray;
+    border: none;
+    border-radius: 1rem;
+    transition: background-color 0.5s;
+}
+
+.menu-container {
+    position: fixed;
+    z-index: 1;
+    margin-top: 5rem;
+    overflow: hidden;
+    width: 30%;
+    left: 35%;
+    bottom: 0;
+    height: 30rem;
+    transition: height 1s;
+}
+
+.options {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.options option {
+    display: flex;
+}
+
+.image-holder {
+    text-align: center;
+    background-image: url("/assets/photo-1522071820081-009f0129c71c.jpg");
+    background-size: cover;
+    height: 40rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+}
+
+.image-holder h1 {
+    position: relative;
+    display: inline-block;
+    top: 50%; 
+    color: white;
+    border-bottom: solid 2px white;
+}
+
+/* section 2 */
+
+.today-pick {
+    text-align: center;
+}
+
+.landing-peoples {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.landing-people .image-wrapper{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 30rem;
+}
+
+.image-wrapper:hover .hover {
+    opacity: 50%;
+}
+
+.hover:hover p{
+    bottom: 50%;
+}
+
+
+.image-wrapper .hover{ 
+    position: absolute;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 30rem;
+    background-color: gray;
+    opacity: 00%;
+    transition: opacity 0.3s;
+}

@@ -1,0 +1,127 @@
+aside {
+    width: 15%;
+    border-right: solid 1px gray;
+    height: 80vh;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+*::placeholder {
+    /* modern browser */
+    color: white;
+}
+
+main {
+    min-height: fit-content;
+}
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user-information-chat p {
+ max-width: 12rem;
+ overflow: hidden;
+}
+
+aside div img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.conversation {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.input-field {
+    border-top: solid 1px gray;
+    display: flex;
+    button {
+        border: none;
+        height: 2rem;
+        border-radius: 2rem;
+        width: 6rem;
+        align-self: center;
+        background-color: red;
+    }
+}
+
+.input-field input {
+    width: 90%;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background-color: gray;
+}
+
+.message-own, .message-other {
+    margin: 0.5rem;
+    word-wrap: break-word;
+}
+
+
+.message-own .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message-other .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message-other .message {
+    display: block;
+    width: fit-content;
+    background: rgb(201, 201, 201);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 0;
+    max-width: 16rem;
+}
+
+.message-other .name {
+    color: gray;
+    margin: 0;
+    text-align: start;
+}
+
+.message-own .message {
+    display: block;
+    width: fit-content;
+    background: red;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 0;
+    max-width: 16rem;
+}
+
+.message-own .name {
+    color: gray;
+    margin: 0;
+    text-align: end;
+}
+
+
+.chat-image-wrapper {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.chat-section {
+    display: flex;
+}
+
+.chat-box {
+    width: 65%;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
