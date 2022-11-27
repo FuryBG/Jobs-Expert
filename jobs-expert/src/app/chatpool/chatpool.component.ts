@@ -37,7 +37,7 @@ export class  ChatpoolComponent {
   SelectChat(roomId: any) {
     console.log(roomId);
     this.participants.forEach((x: any) => {
-      if(x.roominfo[0].roomId == roomId) {
+      if(x.roominfo.roomId == roomId) {
         this.conversation = x.conversationinfo;
       }
     });

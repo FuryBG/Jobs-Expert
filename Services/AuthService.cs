@@ -56,7 +56,7 @@ namespace WebApplication1.Services
                 }
 
             }
-            return null;
+            throw new Exception("Wrong username or password!");
         }
 
         public string Register(UserModel currUser)

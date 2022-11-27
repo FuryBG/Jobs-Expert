@@ -16,23 +16,6 @@ namespace WebApplication1.Controllers
             _service = service;
         }
 
-        [HttpPost("login")]
-        [AllowAnonymous]
-        public IActionResult Login([FromForm] UserLoginModel currUser)
-        {
-            try
-            {
-                string token = _service.Login(currUser);
-                Response.Cookies.Append("Authorization", token, new CookieOptions { HttpOnly = true, Secure = true, SameSite = SameSiteMode.Strict });
-                return Redirect("https://localhost:7285/app/search");
-            }
-            catch (Exception err)
-            {
-                return BadRequest(err.Message);
-            }
-
-        }
-
         [HttpGet("/logout")]
         [Authorize]
         public IActionResult Logout()
@@ -53,21 +36,5 @@ namespace WebApplication1.Controllers
             return Ok(currUser);
         }
 
-
-        [HttpPost("register")]
-        [AllowAnonymous]
-        public IActionResult Register([FromForm] UserModel user)
-        {
-            try
-            {
-                string token = _service.Register(user);
-                Response.Cookies.Append("Authorization", token, new CookieOptions { HttpOnly = true, Secure = true, SameSite = SameSiteMode.Strict });
-                return Redirect("https://localhost:7285/app/search");
-            }
-            catch (Exception err)
-            {
-                return BadRequest(err.Message);
-            }
-        }
     }
 }

@@ -1,11 +1,11 @@
         <section class="chat-section">
             <aside>
-                <div (click)="SelectChat(user.roominfo[0].roomId)" *ngFor="let user of participants" class="user-info">
+                <div (click)="SelectChat(user.roominfo.roomId)" *ngFor="let user of participants" class="user-info">
                     <div class="chat-image-wrapper">
                         <img src="images/small_main_header_caucasian_man_blue_andrea2_small_bb52b9baff.jpg">
                     </div>
                     <div>
-                        <p>{{user.roominfo[0].firstName}}</p>
+                        <p>{{user.roominfo.firstName}}</p>
                         <p>Heeeeey</p>
                     </div>
                 </div>

@@ -34,15 +34,15 @@ namespace WebApplication1.Controllers
             {
                 Dictionary<string, object> myConversation = new Dictionary<string, object>();
 
-                            var requiredUserInfo = (from ep in _dbDataContext.Participants
-                                join us in _dbDataContext.Users on ep.UserId equals us.UserId
-                                where ep.UserId != participant.UserId && ep.RoomId == participant.RoomId
-                                select new
-                                {
-                                    UserId = us.UserId,
-                                    FirstName = us.FirstName,
-                                    RoomId = ep.RoomId,     
-                                }).ToList();
+                var requiredUserInfo = (from ep in _dbDataContext.Participants
+                                        join us in _dbDataContext.Users on ep.UserId equals us.UserId
+                                        where ep.UserId != participant.UserId && ep.RoomId == participant.RoomId
+                                        select new
+                                        {
+                                            UserId = us.UserId,
+                                            FirstName = us.FirstName,
+                                            RoomId = ep.RoomId,
+                                        }).ToList();
 
                 var requiredMessagesInfo = (from ep in _dbDataContext.Messages
                                             join usr in _dbDataContext.Users on ep.UserId equals usr.UserId
@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
                                                 RoomId = ep.RoomId,
                                                 Created = ep.Created
                                             }).OrderBy(c => c.Created).ToList();
-                myConversation.Add("roominfo", requiredUserInfo);
+                myConversation.Add("roominfo", requiredUserInfo[0]);
                 myConversation.Add("conversationinfo", requiredMessagesInfo);
                 dictionaryTest.Add(myConversation);
             }
